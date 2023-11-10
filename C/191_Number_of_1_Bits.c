@@ -8,3 +8,13 @@ int hammingWeight(uint32_t n) {
     }
     return count;
 }
+
+// optimal solution
+int hammingWeight_o(uint32_t n) {
+    int count = 0;
+    while(n) {
+        n = n & (n - 1);
+        count++;
+    }
+    return count;
+}
